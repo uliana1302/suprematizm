@@ -11,9 +11,17 @@
       $("html,body").css("overflow","hidden");
 
       $(".pr5, .pr6, .pr7, .pr4").draggable();
+
+      $(".cros1, .cros2").click(function () {
+        $(".plas").css('opacity', '0');
+      });
     });
   </script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    p {
+      font-family: 'Roboto', sans-serif;
+    }
     body {
       display: block;
       width: 100vw;
@@ -23,6 +31,32 @@
       margin: 0;
       overflow: hidden;
       background-color: #fdf5e6;
+    }
+    .plas {
+      position: absolute;
+      width: 100vw;
+      height: 5vh;
+      background-color: white;
+      z-index: 300;
+      text-align: center;
+    }
+    .cros1 {
+      position: absolute;
+      width: 1px;
+      height: 15px;
+      background-color: black;
+      transform: rotate(45deg);
+      top: 2vh;
+      right: 4vw;
+    }
+    .cros2 {
+      position: absolute;
+      width: 1px;
+      height: 15px;
+      background-color: black;
+      transform: rotate(-45deg);
+      top: 2vh;
+      right: 4vw;
     }
     .elements {
       top: 0;
@@ -130,10 +164,6 @@
       transform: rotate(60deg);
       animation: pr2 3s 7s infinite;
     }
-    /* @keyframes pr2 {
-      0% {transform:rotate(60deg);}
-      100% {transform:rotate(420deg);}
-    } */
     .pr3 {
       background-color: #848482;
       width: 9vh;
@@ -142,10 +172,6 @@
       left: 80vw;
       transform: rotate(-30deg);
       animation: pr3 3s 7s infinite;
-    }
-    @keyframes pr3 {
-      /* 0% {transform:rotate(-30deg);}
-      100% {transform:rotate(330deg);} */
     }
     .pr4 {
       background-color: red;
@@ -194,6 +220,11 @@
   </style>
 </head>
 <body>
+  <div class="plas">
+    <p>Сожми экран на половину!</p>
+    <div class="cros1"></div>
+    <div class="cros2"></div>
+  </div>
   <div class="elements">
     <!-- krugi -->
   <div class="krug kr1"></div>
