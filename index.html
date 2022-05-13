@@ -3,10 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Suprematizm</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("html,body").css("overflow","hidden");
+
+      $(".pr5, .pr6, .pr7, .pr4").draggable();
+    });
+  </script>
+  <style>
+    body {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      margin: 0;
+      overflow: hidden;
+      background-color: #fdf5e6;
+    }
+    .elements {
+      top: 0;
+      left: -30vh;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    .krug {
+      border-radius: 50%;
+    }
+    .kvadr, .priam, .krug {
+      position: absolute;
+    }
+    .kr1 {
+      background-color: red;
+      width: 50vh;
+      height: 50vh;
+      top: 21vh;
+      left: 67vw;
+      z-index: 100;
+      animation: kr1 7s 7s infinite ease-in;
+    }
+    @keyframes kr1 {
+      0%, 100% {width: 50vh; height: 50vh; top: 21vh; left: 67vw;}
+      50% {width: 70vh; height: 70vh; top: 17vh; left: 55vw;}
+    }
+    .kr2 {
+      background-color: red;
+      width: 120vh;
+      height: 120vh;
+      top: -4vh;
+      left: 22vw;
+      animation: kr2 7s 7s infinite ease-in;
+    }
+    @keyframes kr2 {
+      0%, 100% {width: 120vh; height: 120vh; top: -4vh; left: 22vw;}
+      50% {width: 200vh; height: 200vh; top: -20vh; left: -12vw;}
+    }
+    .kr3 {
+      background-color: #fdf5e6;
+      border: 1px;
+      width: 100vh;
+      height: 100vh;
+      top: 7vh;
+      left: 33vw;
+      animation: kr3 3s 7s infinite;
+    }
+    .kr4 {
+      background-color: black;
+      width: 10vh;
+      height: 10vh;
+      top: 84vh;
+      left: 40vw;
+      z-index: 200;
+      animation: kr4 3s 7s infinite;
+      transform-origin: 50% 150px;
+    }
+    @keyframes kr4 {
+      to {transform: rotate(1turn);}
+    }
+    .kv1 {
+      background-color: black;
+      width: 25vh;
+      height: 25vh;
+      top: 32vh;
+      left: 84vw;
+      z-index: 200;
+      animation: kv1 3s 7s infinite;
+    }
+    .kv1:hover {
+      background-color: #fdf5e6;
+    }
+    .kv2 {
+      background-color: #848482;
+      width: 17vh;
+      height: 17vh;
+      top: 10vh;
+      left: 40vw;
+      transform: rotate(-30deg);
+      animation: kv2 3s 7s infinite;
+    }
+    .kv2:hover {
+      opacity: 0;
+    }
+    .pr1 {
+      background-color: black;
+      width: 15vh;
+      height: 95vh;
+      top: -1vh;
+      left: 80vw;
+      transform: rotate(60deg);
+      animation: pr1 3s 7s infinite;
+    }
+    @keyframes pr1 {
+      0% {transform:rotate(60deg);}
+      100% {transform:rotate(420deg);}
+    }
+    .pr2 {
+      background-color: #848482;
+      width: 10vh;
+      height: 50vh;
+      top: 24vh;
+      left: 98vh;
+      transform: rotate(60deg);
+      animation: pr2 3s 7s infinite;
+    }
+    /* @keyframes pr2 {
+      0% {transform:rotate(60deg);}
+      100% {transform:rotate(420deg);}
+    } */
+    .pr3 {
+      background-color: #848482;
+      width: 9vh;
+      height: 90vh;
+      top: 1vh;
+      left: 80vw;
+      transform: rotate(-30deg);
+      animation: pr3 3s 7s infinite;
+    }
+    @keyframes pr3 {
+      /* 0% {transform:rotate(-30deg);}
+      100% {transform:rotate(330deg);} */
+    }
+    .pr4 {
+      background-color: red;
+      width: 2vh;
+      height: 50vh;
+      top: 22vh;
+      left: 40vw;
+      transform: rotate(-50deg);
+      animation: pr4 3s 7s infinite;
+    }
+    .pr5, .pr6, .pr7 {
+      background-color: #848482;
+      width: 2vh;
+      height: 90vh;
+      z-index: 150;
+    }
+    .pr5 {
+      top: 5vh;
+      left: 116vw;
+      transform: rotate(60deg);
+      animation: pr5 3s 7s infinite;
+    }
+    .pr6 {
+      top: 19vh;
+      left: 99vw;
+      transform: rotate(60deg);
+      animation: pr6 3s 7s infinite;
+    }
+    .pr7 {
+      top: -37vh;
+      left: 92vw;
+      animation: pr7 3s 7s infinite;
+    }
+    .pr8 {
+      background-color: black;
+      width: 14vh;
+      height: 80vh;
+      top: 47vh;
+      left: 112vw;
+      transform: rotate(-30deg);
+      animation: pr8 3s 7s infinite;
+    }
+    .pr8:hover {
+      opacity: 0;
+    }
+  </style>
 </head>
 <body>
-
+  <div class="elements">
+    <!-- krugi -->
+  <div class="krug kr1"></div>
+  <div class="krug kr2"></div>
+  <div class="krug kr3"></div>
+  <div class="krug kr4"></div>
+    <!-- kvadrati -->
+  <div class="kvadr kv1"></div>
+  <div class="kvadr kv2"></div>
+    <!-- priamougolniki -->
+  <div class="priam pr1"></div>
+  <div class="priam pr2"></div>
+  <div class="priam pr3"></div>
+  <div class="priam pr4"></div>
+  <div class="priam pr5"></div>
+  <div class="priam pr6"></div>
+  <div class="priam pr7"></div>
+  <div class="priam pr8"></div>
+  </div>
 </body>
 </html>
